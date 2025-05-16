@@ -1,2 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&family=Rancho&display=swap');
+
 @import "tailwindcss";
 @plugin "daisyui";
+
+.heading-font {
+  font-family: "Rancho", cursive;
+}
+.base-font{
+  font-family: "Raleway", sans-serif;
+}
+
+.header-image{
+  background-image: url('images/more/15.jpg');
+}
+.footer-bg1{
+  background-image: url('images/more/13.jpg');
+}
+.footer-bg2{
+  background-image: url('images/more/24.jpg');
+}
+.drop-shadow{
+  filter: drop-shadow(2px 2px 4px rgba(51, 26, 21, 0.3)) drop-shadow(0 0 8px rgba(51, 26, 21, 0.2));
+}
