@@ -1,10 +1,10 @@
-import React from 'react';
 import { BsCup } from 'react-icons/bs';
 import { Link } from 'react-router';
 import CoffeCard from './CoffeCard';
 
-const CoffeContainer = ({initialCoffees}) => {
+const CoffeContainer = ({ coffees, setCoffees}) => {
     // console.log(initialCoffees)
+
     return (
         <div className='my-15 container-bg'>
             <p className='text-[#1B1A1A] text-center'>--- Sip & Savor ---</p>
@@ -16,9 +16,11 @@ const CoffeContainer = ({initialCoffees}) => {
             {/* coffee container start */}
             <div className='max-w-6/7 mx-auto grid grid-cols-2 gap-10 mt-10'>
                 {
-                    initialCoffees.map((coffee) => <CoffeCard
+                    coffees.map((coffee) => <CoffeCard
                         coffee = {coffee}
-                        key={coffee._id}
+                        key = {coffee._id}
+                        coffees = {coffees}
+                        setCoffees = {setCoffees}
                     ></CoffeCard>)
                 }
             </div>

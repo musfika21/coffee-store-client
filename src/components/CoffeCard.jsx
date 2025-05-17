@@ -4,7 +4,7 @@ import { MdDelete } from 'react-icons/md';
 import { Link } from 'react-router';
 import Swal from 'sweetalert2';
 
-const CoffeCard = ({ coffee }) => {
+const CoffeCard = ({ coffee, coffees, setCoffees }) => {
     const { _id, name, chef, price, photo } = coffee;
 
     const handleDelete = (id) => {
@@ -31,6 +31,10 @@ const CoffeCard = ({ coffee }) => {
                                 text: "Your Coffee has been deleted.",
                                 icon: "success",
                             });
+
+                            // removing the coffee from the UI
+                            const remainingCoffee = coffees.filter((coff) => coff._id !== id);
+                            setCoffees(remainingCoffee);
                         }
                     })
 
@@ -45,9 +49,9 @@ const CoffeCard = ({ coffee }) => {
             </div>
 
             <div className='space-y-4'>
-                <p className='font-medium'>Name: <span className='font-light'>{name}</span></p>
-                <p className='font-medium'>Chef: <span className='font-light'>{chef}</span></p>
-                <p className='font-medium'>Price: <span className='font-light'>{price}</span></p>
+                <p className='font-medium'>Name : <span className='font-light'>{name}</span></p>
+                <p className='font-medium'>Chef : <span className='font-light'>{chef}</span></p>
+                <p className='font-medium'>Price : <span className='font-light'>{price}</span></p>
             </div>
 
             <div className='ml-20'>
