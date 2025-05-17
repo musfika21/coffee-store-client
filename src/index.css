@@ -6,6 +6,7 @@
 .heading-font {
   font-family: "Rancho", cursive;
 }
+
 .base-font{
   font-family: "Raleway", sans-serif;
 }
@@ -13,12 +14,30 @@
 .header-image{
   background-image: url('images/more/15.jpg');
 }
+
+.coffee-bg{
+  background-image: url('images/more/11.png');
+}
+
 .footer-bg1{
   background-image: url('images/more/13.jpg');
 }
+
 .footer-bg2{
   background-image: url('images/more/24.jpg');
 }
+
 .drop-shadow{
   filter: drop-shadow(2px 2px 4px rgba(51, 26, 21, 0.3)) drop-shadow(0 0 8px rgba(51, 26, 21, 0.2));
+}
+
+.banner-img{
+  background-image: url('images/more/6.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: scaleX(-1);
+}
+
+.text{
+  transform: scaleX(-1);
 }
