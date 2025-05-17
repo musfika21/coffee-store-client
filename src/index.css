@@ -41,3 +41,7 @@
 .text{
   transform: scaleX(-1);
 }
+
+.container-bg{
+  background-image: url('images/more/1.png');
+}

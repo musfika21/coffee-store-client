@@ -1,7 +1,6 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import App from './App.jsx'
 import {
   createBrowserRouter,
   RouterProvider,
@@ -10,6 +9,7 @@ import MainLayout from './Layout/MainLayout.jsx';
 import Home from './components/Home.jsx';
 import AddCoffee from './components/AddCoffee.jsx';
 import UpdateCoffee from './components/UpdateCoffee.jsx';
+import DetailsCoffee from './components/DetailsCoffee.jsx';
 
 const router = createBrowserRouter([
   {
@@ -26,7 +26,12 @@ const router = createBrowserRouter([
         Component: AddCoffee
       },
       {
-        path: '/updateCoffee',
+        path: '/details/:id',
+        loader: ({params}) => fetch(`http://localhost:3000/coffees/${params.id}`),
+        Component: DetailsCoffee
+      },
+      {
+        path: '/updateCoffee/:id',
         Component: UpdateCoffee
       }
     ]

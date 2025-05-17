@@ -25,9 +25,11 @@ const AddCoffee = () => {
             .then((data) => {
                 if (data.insertedId) {
                     Swal.fire({
-                        title: "Coffee Added Successfully",
+                        position: "top-end",
                         icon: "success",
-                        draggable: true
+                        title: "Your work has been saved",
+                        showConfirmButton: false,
+                        timer: 1500
                     });
                 }
                 // console.log('after adding coffee to the database',data)
