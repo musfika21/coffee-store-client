@@ -44,4 +44,6 @@
 
 .container-bg{
   background-image: url('images/more/1.png');
+    background-size: cover;
+
 }

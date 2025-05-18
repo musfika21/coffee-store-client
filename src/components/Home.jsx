@@ -3,6 +3,7 @@ import Banner from './Banner';
 import Section from './Section';
 import { useLoaderData } from 'react-router';
 import CoffeContainer from './CoffeContainer';
+import Instagram from './Instagram';
 
 const Home = () => {
     const initialCoffees = useLoaderData();
@@ -17,6 +18,7 @@ const Home = () => {
                 coffees = {coffees}
                 setCoffees = {setCoffees}
             ></CoffeContainer>
+            <Instagram></Instagram>
         </>
     );
 };
